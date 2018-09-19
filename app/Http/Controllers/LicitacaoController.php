@@ -47,7 +47,7 @@ class LicitacaoController extends Controller
      */
     public function show(Licitacao $licitacao)
     {
-        //
+        return view('licitacoes.show', compact('licitacaos'));
     }
 
     /**
