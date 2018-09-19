@@ -14,7 +14,8 @@ class LicitacaoController extends Controller
      */
     public function index()
     {
-        //
+        $licitacaos = Licitacao::all();
+        return view('licitacoes.index', compact('licitacaos'));
     }
 
     /**

@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/', 'IndexController@gritar');
-Route::get('/{numero}', 'IndexController@gritarMultiplo');
+Route::get('/','LicitacaoController@index');
+Route::resource('licitacaos','LicitacaoController');
