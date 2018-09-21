@@ -1,3 +1,4 @@
+@extends('layouts.master')
 <form method="POST" action="/licitacaos/{{ $licitacao->id  }}">
     {{ csrf_field() }}
     {{ method_field('patch') }}

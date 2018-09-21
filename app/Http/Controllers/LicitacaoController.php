@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class LicitacaoController extends Controller
 {
+    /** Exige logim do usuário exceto index e show */
+    public function __construct()
+{
+    $this->middleware('auth')->except(['index','show']);
+}
     /**
      * Display a listing of the resource.
      *

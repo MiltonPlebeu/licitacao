@@ -1,3 +1,4 @@
+@extends('layouts.master') 
 <p>
 	<a href="/licitacaos/create">Cadastrar nova licitação</a>
 

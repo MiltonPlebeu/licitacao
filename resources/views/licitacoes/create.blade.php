@@ -1,3 +1,4 @@
+@extends('layouts.master')
 <form method="POST" action="/licitacaos">
 	{{ csrf_field() }} 
     Tipo: <input name="tipo">

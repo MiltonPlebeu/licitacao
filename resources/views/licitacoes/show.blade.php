@@ -1,3 +1,4 @@
+@extends('layouts.master')
 <p>{{$licitacao->tipo}}</p>
 <p>{{$licitacao->objeto}}</p>
 <p>{{$licitacao->numlicitacao}}</p>
