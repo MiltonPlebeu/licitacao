@@ -1,3 +1,7 @@
+<p>
+	<a href="licitacaos/create">Cadastrar nova licitação</a>
+
+</p>
 <ul>
 	@foreach($licitacaos as $licitacao)
 		<li>

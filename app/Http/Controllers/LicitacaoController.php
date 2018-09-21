@@ -25,7 +25,7 @@ class LicitacaoController extends Controller
      */
     public function create()
     {
-        //
+        return view('licitacoes.create');
     }
 
     /**
@@ -36,7 +36,15 @@ class LicitacaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $licitacao = new Licitacao;
+        $licitacao->tipo         = $request->tipo;
+        $licitacao->objeto       = $request->objeto;
+        $licitacao->numlicitacao = $request->numlicitacao;
+        $licitacao->dataabertura = $request->dataabertura;
+        $licitacao->status       = $request->status;
+        $licitacao->documentos   = $request->documentos;
+        $licitacao->save();
+        return redirect('/');
     }
 
     /**
@@ -47,7 +55,7 @@ class LicitacaoController extends Controller
      */
     public function show(Licitacao $licitacao)
     {
-        return view('licitacoes.show', compact('licitacaos'));
+        return view('licitacoes.show',compact('licitacao'));
     }
 
     /**
