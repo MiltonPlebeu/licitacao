@@ -66,7 +66,7 @@ class LicitacaoController extends Controller
      */
     public function edit(Licitacao $licitacao)
     {
-        //
+        return view('licitacoes.edit',compact('licitacao'));
     }
 
     /**
@@ -78,7 +78,14 @@ class LicitacaoController extends Controller
      */
     public function update(Request $request, Licitacao $licitacao)
     {
-        //
+        $licitacao->tipo         = $request->tipo;
+        $licitacao->objeto       = $request->objeto;
+        $licitacao->numlicitacao = $request->numlicitacao;
+        $licitacao->dataabertura = $request->dataabertura;
+        $licitacao->status       = $request->status;
+        $licitacao->documentos   = $request->documentos;
+        $licitacao->save();
+        return redirect("/licitacaos/$licitacao->id");
     }
 
     /**
@@ -89,6 +96,7 @@ class LicitacaoController extends Controller
      */
     public function destroy(Licitacao $licitacao)
     {
-        //
+        $licitacao->delete();
+        return redirect('/');
     }
 }
