@@ -1,4 +1,6 @@
 @extends('layouts.master')
+
+@section('content')
 <form method="POST" action="/licitacaos/{{ $licitacao->id  }}">
     {{ csrf_field() }}
     {{ method_field('patch') }}
@@ -12,4 +14,4 @@
 
     <button type="submit"> Salvar </button>
 </form>
-
+@endsection
